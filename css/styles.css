@@ -1,7 +1,54 @@
-header, footer{
-    background-color: black;
+body{
+    
+    color: white;
+    justify-content: justify;
+    background-image: url("../img/DeepSpace.jpg");
+    background-position: center;
 }
 
-body{
-    background-image: url("../img/DeepSpace.jpg");
+header, footer{
+    background-color: rgb(30, 30, 30);
+    margin: 0;
+    padding: 10px;
+}
+
+header img{
+    height: 100px;
+    width: auto;
+}
+
+#nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.nav-items{
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.nav-items strong{
+    font-size: 300%;
+}
+
+.nav-items ul{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.nav-items:hover ul{
+    display: block;
+}
+
+section{
+    margin: 20px 20% 20px 20%;
+    background-color: #222;
+    padding: 15px;
 }
