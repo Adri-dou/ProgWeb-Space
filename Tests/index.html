@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroPhoto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur AstroPhoto</h1>
+        <p>Explorez les merveilles de l'espace à travers l'objectif de nos caméras</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>Bienvenue dans l'Univers</h2>
+        <p>Découvrez des photos époustouflantes de l'espace et des conseils pour améliorer vos compétences en astrophotographie.</p>
+    </section>
+    <section id="about">
+        <h2>À propos</h2>
+        <p>Nous sommes une communauté de passionnés d'astronomie et de photographie qui partageons nos découvertes et nos images avec le monde.</p>
+    </section>
+    <section id="gallery">
+        <h2>Galerie</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="https://www.astrobin.com/1j35w3/?q=galaxy"><img src="images/photo1.jpg" alt="Photo d'espace 1"></a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.astrobin.com/7zmazv/?q=moon"><img src="images/photo2.jpg" alt="Photo d'espace 2"></a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.astrobin.com/7f1bso/?q=nebula"><img src="images/photo3.jpg" alt="Photo d'espace 3"></a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 AstroPhoto. Tous droits réservés.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
