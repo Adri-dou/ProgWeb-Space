@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Titre de la page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/styles.css">
-        <script src="../js/scripts.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>En-tête</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Lien 1</a></li>
-                    <li><a href="#">Lien 2</a></li>
-                    <li><a href="#">Lien 3</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section>
-                <h2>Section 1</h2>
-                <p>Contenu de la section 1</p>
-            </section>
-
-            <section>
-                <h2>Section 2</h2>
-                <p>Contenu de la section 2</p>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 - Site web réalisé par MONTEIRO Adrian</p>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <title>Contact - AstroPhoto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur AstroPhoto</h1>
+        <p>Explorez les merveilles de l'espace à travers l'objectif de nos caméras</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="systeme_solaire.html">Système solaire</a></li>
+            <li><a href="autres_astres.html">Autres astres</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="a_propos.html">À propos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Contactez-moi !</h2>
+        <form id="contactForm">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 AstroPhoto. Tous droits réservés.</p>
+    </footer>
+</body>
 </html>

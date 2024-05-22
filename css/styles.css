@@ -1,54 +1,129 @@
-body{
-    
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
     color: white;
-    justify-content: justify;
-    background-image: url("../img/DeepSpace.jpg");
-    background-position: center;
+    animation: fadeIn 0.5s ease-in;
+    align-content: center;
 }
 
-header, footer{
-    background-color: rgb(30, 30, 30);
+header {
+    text-align: center;
+    padding: 50px 0 30px 0;
+    background: url('../img/nebula-bg.jpg');
+    animation: fadeIn 2s ease-in;
+}
+
+header h1 {
     margin: 0;
-    padding: 10px;
 }
 
-header img{
-    height: 100px;
-    width: auto;
+header p {
+    margin-top: 20px;
 }
 
-#nav-list{
+nav ul {
     display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
+    justify-content: center;
+    list-style: none;
     margin: 0;
-    justify-content: space-between;
-}
-
-.nav-items{
     padding: 10px;
-    margin: 10px;
-    position: relative;
-}
-
-.nav-items strong{
-    font-size: 300%;
-}
-
-.nav-items ul{
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.nav-items:hover ul{
-    display: block;
-}
-
-section{
-    margin: 20px 20% 20px 20%;
     background-color: #222;
-    padding: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 10px 40px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    background-color: #555;
+}
+
+main, section {
+    padding: 50px;
+    text-align: center;
+}
+
+.centered-div {
+    justify-content: center;
+    margin: 0 30%;
+}
+
+#gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea, form button {
+    width: 30%;
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00f;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0051ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
 }
