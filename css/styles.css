@@ -1,3 +1,5 @@
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -19,9 +21,14 @@
     }
 }
 
-body {
+body, html {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+body {
     background-color: #111;
     color: white;
     animation: fadeIn 0.5s ease-in;
@@ -32,7 +39,7 @@ header {
     text-align: center;
     padding: 50px 0 30px 0;
     background: url('../img/nebula-bg.jpg');
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 1s ease-in;
 }
 
 header h1 {
@@ -73,6 +80,23 @@ main{
     text-align: center;
 }
 
+.dark-background {
+    background-image: url('../img/deep-space-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: brightness(20%);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+}
+
 section {
     margin: 30px 0 70px 0;
 }
@@ -96,31 +120,40 @@ h2 {
     text-underline-offset: 10px;
 }
 
-#home-content {
+#home-content, #sketchfab-des {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.home-item {
+.grey-box, #model-text {
     background-color: #222;
     padding: 20px;
     margin: 10px;
     border-radius: 15px;
     width: 33%;
     color: white;
-    text-align: left;
+    text-align: justify;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: transform 0.2s, box-shadow 0.3s;
 }
 
-.home-item h3 {
+.grey-box h3 {
     color: #fff;
     text-align: center;
     position: relative;
 }
 
-.home-item h3::after {
+.rotating-pulsing-star {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    animation: rotate-pulse 3s linear infinite;
+}
+
+.grey-box h3::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -133,11 +166,11 @@ h2 {
     transition: transform 0.5s;
 }
 
-.home-item:hover h3::after {
+.grey-box:hover h3::after {
     transform: scaleX(1);
 }
 
-.home-item p {
+.grey-box p {
     color: #ccc;
     text-align: justify;
     padding: 5px;
@@ -166,18 +199,14 @@ h2 {
     border-radius: 30px;
 }
 
-.home-item:hover, .gallery-item:hover {
+.grey-box:hover, .gallery-item:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
-.rotating-pulsing-star {
-    display: flex;
-    position: absolute;
-    right: 5%;
-    width: 100px;
-    height: 100px;
-    animation: rotate-pulse 5s linear infinite;
+#model-text {
+    margin: 25px 0 75px 0;
+    width: 25%;
 }
 
 form {
@@ -219,4 +248,21 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #222;
+}
+
+
+@media (max-width: 1100px) {
+    .grey-box {
+        width: calc(100% - 40px);
+    }
+
+    .rotating-pulsing-star {
+        width: 50px;
+        height: 50px;
+    }
+
+    #gallery-title img {
+        width: 30%;
+        translate: -10% -50px;
+    }
 }
