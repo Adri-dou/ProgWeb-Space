@@ -78,7 +78,6 @@ nav ul li a:hover {
 
 main{
     padding: 50px;
-    text-align: center;
 }
 
 .dark-background {
@@ -96,6 +95,7 @@ main{
 
 .content {
     position: relative;
+    text-align: center;
 }
 
 section {
@@ -256,10 +256,6 @@ h2 {
     width: 25%;
 }
 
-#search-section {
-    margin: 20px;
-}
-
 #searchInput {
     padding: 10px;
     border: none;
@@ -267,43 +263,46 @@ h2 {
     margin-right: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #00f;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0051ff;
-}
-
-#result-section {
-    margin: 20px;
-    width: 80%;
-}
-
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
+    margin: auto;
     margin-top: 20px;
 }
 
 th, td {
     padding: 10px;
-    border: 1px solid #333;
+    border: 1px solid #111;
 }
 
 th {
     background-color: #555;
 }
 
-td {
+tr:nth-child(even) {
+    background-color: #252525;
+}
+
+tr:nth-child(odd) {
     background-color: #222;
 }
+
+#apod-api {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.apod-item {
+    width: 30%;
+}
+
+.apod-item img, .apod-item iframe {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
 
 form {
     display: flex;
@@ -316,7 +315,7 @@ form label, form input, form textarea, form button {
     margin: 10px 0;
 }
 
-form input, form textarea {
+input, form textarea {
     padding: 10px;
     border: 1px solid #555;
     border-radius: 5px;
@@ -324,18 +323,18 @@ form input, form textarea {
     color: #fff;
 }
 
-form button {
+button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background-color: orangered;
     color: #fff;
-    font-size: 1em;
+    font-size: 0.8em;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-form button:hover {
+button:hover {
     background-color: orange;
     transform: scale(1.05);
 }

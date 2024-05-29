@@ -58,26 +58,24 @@
                     </p>
                 </div>
             </div>
+            <div id="search-planet">
+                <h2>Vous voulez vous informer ?</h2>
+                <br>
+                <p>Je vous invite à taper le nom en anglais ou français de la planète</p>
+                <input type="text" id="searchInput" placeholder="Nom de l'astre">
+                <button type="submit" onclick="fetchAstreInfo()">Rechercher</button>
+                <table id="resultTable">
+                    <thead>
+                        <tr>
+                            <th>Propriété</th>
+                            <th>Valeur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <section id="search-section">
-            <h2>Entrez le nom d'un astre</h2>
-            <input type="text" id="searchInput" placeholder="Nom de l'astre">
-            <button onclick="fetchAstreInfo()">Rechercher</button>
-        </section>
-        <section id="result-section">
-            <h2>Résultats</h2>
-            <table id="resultTable">
-                <thead>
-                    <tr>
-                        <th>Propriété</th>
-                        <th>Valeur</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Les résultats seront insérés ici -->
-                </tbody>
-            </table>
-        </section>
     </main>
     <footer>
         <p>&copy; 2024 AstroPhoto. Tous droits réservés.</p>

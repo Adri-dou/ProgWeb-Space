@@ -50,7 +50,7 @@ section {
     text-align: center;
 }
 
-.apod-container {
+#apod-api {
     display: flex;
     justify-content: center;
     gap: 20px;
