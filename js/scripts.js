@@ -43,18 +43,18 @@ async function fetchAstreInfo() {
 
 function displayAstreInfo(data) {
     const resultTable = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
-    resultTable.innerHTML = '';  // Clear previous results
+    resultTable.innerHTML = '';
 
     const properties = [
-        { name: 'Nom', value: data.englishName },
+        { name: 'Nom', value: data.name },
         { name: 'Type', value: data.isPlanet ? 'Planète' : 'Autre' },
-        { name: 'Masse (kg)', value: data.mass ? `${data.mass.massValue} x 10^${data.mass.massExponent}` : 'N/A' },
-        { name: 'Volume (km^3)', value: data.vol ? `${data.vol.volValue} x 10^${data.vol.volExponent}` : 'N/A' },
-        { name: 'Gravité (m/s²)', value: data.gravity || 'N/A' },
-        { name: 'Rayon moyen (km)', value: data.meanRadius || 'N/A' },
-        { name: 'Température moyenne (K)', value: data.avgTemp || 'N/A' },
-        { name: 'Période orbitale (jours)', value: data.sideralOrbit || 'N/A' },
-        { name: 'Période de rotation (heures)', value: data.sideralRotation || 'N/A' }
+        { name: 'Masse (kg)', value: data.mass ? `${data.mass.massValue} x 10^${data.mass.massExponent}` : 'Donnée non fournie' },
+        { name: 'Volume (km^3)', value: data.vol ? `${data.vol.volValue} x 10^${data.vol.volExponent}` : 'Donnée non fournie' },
+        { name: 'Gravité (m/s²)', value: data.gravity || 'Donnée non fournie' },
+        { name: 'Rayon moyen (km)', value: data.meanRadius || 'Donnée non fournie' },
+        { name: 'Température moyenne (K)', value: data.avgTemp || 'Donnée non fournie' },
+        { name: 'Période orbitale (jours)', value: data.sideralOrbit || 'Donnée non fournie' },
+        { name: 'Période de rotation (heures)', value: data.sideralRotation || 'Donnée non fournie' }
     ];
 
     properties.forEach(prop => {
@@ -67,7 +67,7 @@ function displayAstreInfo(data) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = 'DEMO_KEY';  // Remplacez 'DEMO_KEY' par votre clé API de la NASA
+    const apiKey = 'NJ1GiWe0dL9CYXpmut9k4fnC7PAPE8oaSWwkeoiL';
     const apodContainer = document.getElementById('apod-api');
 
     async function fetchApodData(date) {
@@ -93,17 +93,19 @@ document.addEventListener("DOMContentLoaded", function() {
             apodItem.className = 'apod-item';
             if (data.media_type === 'image') {
                 apodItem.innerHTML = `
-                    <img src="${data.url}" alt="${data.title}">
+                    <a href="${data.url}"><img src="${data.url}" alt="${data.title}"></a>
                     <p>${data.title}</p>
+                    <p>Publiée le : ${data.date}</p>
                 `;
             } else if (data.media_type === 'video') {
                 apodItem.innerHTML = `
                     <iframe src="${data.url}" frameborder="0" allowfullscreen></iframe>
                     <p>${data.title}</p>
+                    <p>Publiée le : ${data.date}</p>
                 `;
             } else {
                 apodItem.innerHTML = `
-                    <p>Contenu multimédia non pris en charge</p>
+                    <p>L'image du jour n'a pas pu être chargée...</p>
                 `;
             }
             apodContainer.appendChild(apodItem);

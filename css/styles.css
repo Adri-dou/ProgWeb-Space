@@ -190,18 +190,14 @@ h2 {
     flex-wrap: wrap;
 }
 
-.gallery-item {
+.gallery-item, .apod-item {
     width: 30%;
     margin-bottom: 20px;
     transition: transform 0.3s;
 }
 
-.gallery-item img {
-    width: 100%;
-    border-radius: 30px;
-}
 
-.grey-box:hover, .gallery-item:hover {
+.grey-box:hover, .gallery-item:hover, .apod-item:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
@@ -280,7 +276,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #252525;
+    background-color: #333;
 }
 
 tr:nth-child(odd) {
@@ -290,19 +286,14 @@ tr:nth-child(odd) {
 #apod-api {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 3%;
 }
 
-.apod-item {
-    width: 30%;
-}
-
-.apod-item img, .apod-item iframe {
+.gallery-item img, .apod-item img, .apod-item iframe {
     width: 100%;
     border-radius: 10px;
-    height: auto;
+    height: 100%;
 }
-
 
 form {
     display: flex;
@@ -337,6 +328,11 @@ button {
 button:hover {
     background-color: orange;
     transform: scale(1.05);
+}
+
+#profile {
+    width: 150px;
+    border-radius: 50%;
 }
 
 footer {
