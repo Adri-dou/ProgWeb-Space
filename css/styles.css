@@ -177,6 +177,26 @@ h2 {
     padding: 5px;
 }
 
+.grey-box img, #discover .grey-box div {
+    width: 50%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#discover {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#discover .grey-box {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 #gallery-title img {
     display: flex;
     position: absolute;
@@ -305,6 +325,8 @@ tr:nth-child(odd) {
     border-radius: 10px;
     object-fit: cover;
 }
+
+
 
 form {
     display: flex;

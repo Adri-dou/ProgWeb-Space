@@ -66,6 +66,26 @@ function displayAstreInfo(data) {
     });
 }
 
+/*  Remplir le tableau au lancement de la page
+document.addEventListener("DOMContentLoaded", function() {
+    const url = `https://api.le-systeme-solaire.net/rest/bodies/terre`;
+
+    async function fetchAstreInfoStart(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Astre non trouvé');
+            }
+            const data = await response.json();
+            displayAstreInfo(data);
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+    fetchAstreInfoStart(url);
+});
+*/
+
 document.addEventListener("DOMContentLoaded", function() {
     const apiKey = 'NJ1GiWe0dL9CYXpmut9k4fnC7PAPE8oaSWwkeoiL';
     const apodContainer = document.getElementById('apod-api');
