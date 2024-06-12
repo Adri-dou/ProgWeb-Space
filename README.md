@@ -2,7 +2,7 @@
 
 ## Description
 
-AstroPhoto est une plateforme interactive dédiée aux passionnés d'astronomie et d'astrophotographie. Le site permet aux utilisateurs d'explorer les merveilles de l'espace, d'accéder à des informations détaillées sur divers astres, et de découvrir des photographies époustouflantes.
+Mon site AstroPhoto est issu d'un projet scolaire. Ce site partage ma passion qu'est l'astronomie et plus précisément l'astrophotographie. Il permet aux utilisateurs d'admirer par mes yeux la beauté de du ciel qui se trouve au-dessus de nous. Sur ce site, vous pourrez admirer les astres via de magnifiques images, avoir accèes à des informations détaillées sur les objets cosmiques, vous balader  dans le système solaire grâce à un modèle 3D de la NASA... Bref je vous laisse visiter.
 
 ## Fonctionnalités
 
@@ -24,7 +24,7 @@ AstroPhoto est une plateforme interactive dédiée aux passionnés d'astronomie 
 
 1. Clonez le dépôt Git :
    ```
-   git clone https://github.com/votre-utilisateur/AstroPhoto.git
+   git clone https://github.com/Adri-dou/ProgWeb-Space.git
    ```
 2. Ouvrez le fichier `accueil.html` dans votre navigateur __en live server__ pour voir le site en action.
 
@@ -34,4 +34,4 @@ AstroPhoto est une plateforme interactive dédiée aux passionnés d'astronomie 
 2. Utilisez le menu de navigation pour explorer les différentes sections du site.
 3. Dans la section "Système solaire", vous pouvez entrer le nom d'un astre pour obtenir des informations détaillées à son sujet.
 4. Consultez la galerie pour voir des photos de l'espace (Je vous invite à explorer [Astrobin](https://welcome.astrobin.com/) pour admirer les pépites d'autres personnes).
-5. Utilisez la page de contact pour envoyer des messages.
+5. Utilisez la page de contact pour envoyer des messages. (enfin pas vraiment, mais bon..)
